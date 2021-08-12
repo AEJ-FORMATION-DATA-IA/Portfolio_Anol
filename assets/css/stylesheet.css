@@ -1,11 +1,38 @@
+*::after, ::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
+  padding-right: 1rem!important;
+  padding-left: 1rem!important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 a {
   color: #000;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.igs-px_3 {
+  padding-right: 1rem!important;
+  padding-left: 1rem!important;
+}
+
+main {
+  display: block;
 }
 
 /* header */
