@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.igs-header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.igs-header ul {
+  margin: 0;
+  padding: 30px;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.igs-header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.igs-header li a:hover,
+.igs-header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.igs-header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.igs-header .igs-menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.igs-header .igs-menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.igs-header .igs-menu-icon .igs-navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.igs-header .igs-menu-icon .igs-navicon:before,
+.igs-header .igs-menu-icon .igs-navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.igs-header .igs-menu-icon .igs-navicon:before {
+  top: 5px;
+}
+
+.igs-header .igs-menu-icon .igs-navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.igs-header .igs-menu-btn {
+  display: none;
+}
+
+.igs-header .igs-menu-btn:checked ~ .igs-menu {
+  max-height: 240px;
+}
+
+.igs-header .igs-menu-btn:checked ~ .igs-menu-icon .igs-navicon {
+  background: transparent;
+}
+
+.igs-header .igs-menu-btn:checked ~ .igs-menu-icon .igs-navicon:before {
+  transform: rotate(-45deg);
+}
+
+.igs-header .igs-menu-btn:checked ~ .igs-menu-icon .igs-navicon:after {
+  transform: rotate(45deg);
+}
+
+.igs-header .igs-menu-btn:checked ~ .igs-menu-icon:not(.steps) .igs-navicon:before,
+.igs-header .igs-menu-btn:checked ~ .igs-menu-icon:not(.steps) .igs-navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .igs-header li {
+    float: left;
+  }
+  .igs-header li a {
+    padding: 20px 30px;
+  }
+  .igs-header .igs-menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .igs-header .igs-menu-icon {
+    display: none;
+  }
+}
+
